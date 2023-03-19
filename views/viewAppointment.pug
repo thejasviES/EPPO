@@ -1,0 +1,25 @@
+doctype html
+head
+  include head 
+  link(rel='stylesheet' href='/css/style.css')
+// header section starts
+include navbar
+// header section ends
+section.prview
+  h1.heading view appointments
+  .box-container.container
+    each p in posts 
+      if((p.from._id==idUser||p.to._id==idUser)&&p.Accept==0)
+        .box
+          
+          h3 Relevent document 
+          img(src=`/images/postPhotos/${p.postPhoto[0]}` alt='')
+          h3=`Sender name${p.from.name}`
+          h3=p.to.email
+          h3=`Reciver Name${p.to.name}`
+          a.btn1(href=`/acceptPost/${p._id}`) ACCEPT
+          a.btn1(href=`/updateAppointment/${p._id}`) UPDATE
+        
+// footer section starts
+include footer
+script(src='/js/script.js')

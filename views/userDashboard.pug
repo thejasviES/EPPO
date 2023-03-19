@@ -1,0 +1,133 @@
+doctype html
+// Designined by CodingLab | www.youtube.com/codinglabyt
+head
+  meta(charset='UTF-8')
+  // <title> Responsiive Admin Dashboard | CodingLab </title>
+  link(rel='stylesheet' href='./style.css')
+  // Boxicons CDN Link
+  link(href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css' integrity='sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==' crossorigin='anonymous' referrerpolicy='no-referrer')
+section.home-section(style='margin-top: 1rem;')
+  nav
+    .sidebar-button
+      a(href='./index.html')
+        i.bx.bx-menu.sidebarBtn
+      span.dashboard Dashboard
+    .profile-details
+      // <img src="images/profile.jpg" alt="">
+      span.admin_name User Name
+  .home-content
+    .overview-boxes
+      .box
+        .right-side
+          .box-topic Total Appoinments
+          .number 40
+          .indicator
+            i.bx.bx-up-arrow-alt
+            span.text Up from yesterday
+        i.fa.fa-check-square.fa-2x(aria-hidden='true')
+      .box
+        .right-side
+          .box-topic Remaining Appointments
+          .number 52
+          .indicator
+            i.bx.bx-up-arrow-alt
+            span.text Up from yesterday
+        i.fa.fa-book.fa-2x(aria-hidden='true')
+    .sales-boxes
+      .recent-sales.box
+        .title Recent Appointments
+        .sales-details
+          ul.details
+            li.topic Date
+            li
+              a(href='#') 02 Jan 2021
+            li
+              a(href='#') 02 Jan 2021
+            li
+              a(href='#') 02 Jan 2021
+            li
+              a(href='#') 02 Jan 2021
+            li
+              a(href='#') 02 Jan 2021
+            li
+              a(href='#') 02 Jan 2021
+            li
+              a(href='#') 02 Jan 2021
+          ul.details
+            li.topic Doctor&apos;s name
+            li
+              a(href='#') Alex Doe
+            li
+              a(href='#') David Mart
+            li
+              a(href='#') Roe Parter
+            li
+              a(href='#') Diana Penty
+            li
+              a(href='#') Martin Paw
+            li
+              a(href='#') Doe Alex
+            li
+              a(href='#') Aiana Lexa
+            li
+              a(href='#') Rexel Mags
+            li
+              a(href='#') Tiana Loths
+          ul.details
+            li.topic Time 
+            li
+              a(href='#') 09AM - 10AM
+            li
+              a(href='#') 10AM - 11AM
+            li
+              a(href='#') 11AM - 12PM
+            li
+              a(href='#') 12PM - 01PM
+            li
+              a(href='#') 01PM - 02PM
+            li
+              a(href='#') 02PM - 03PM
+            li
+              a(href='#') 08AM - 09AM
+            li
+              a(href='#') 02PM - 03PM
+            li
+              a(href='#') 10AM - 11AM
+        .button
+          a(href='#') See All
+      .top-sales.box
+        .title List of Requested appointments
+        ul.top-sales-details
+          li
+            a(href='#')
+              // <img src="images/sunglasses.jpg" alt="">
+              span.product Abhishek
+            span.price )04/03/2023
+          li
+            a(href='#')
+              // <img src="images/jeans.jpg" alt="">
+              span.product Farhan 
+            span.price 04/03/2023
+          li
+            a(href='#')
+              // <img src="images/nike.jpg" alt="">
+              span.product Hemanth
+            span.price 04/03/2023
+          li
+            a(href='#')
+              // <img src="images/scarves.jpg" alt="">
+              span.product Appu
+            span.price 04/03/2023
+script.
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".sidebarBtn");
+  sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+  }else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+  }
+script(src='https://code.jquery.com/jquery-3.6.1.min.js' integrity='sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=' crossorigin='anonymous')

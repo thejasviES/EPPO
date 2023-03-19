@@ -1,0 +1,23 @@
+doctype html
+head
+  include head 
+  link(rel='stylesheet' href='/css/style.css')
+// header section starts
+include navbar
+// header section ends
+section.prview
+  h1.heading view appointments
+  .box-container.container
+    each p in posts 
+      if((p.from._id==parm||p.to._id==parm)&&p.Accept==1)
+        .box
+          h3 Relevent document 
+          img(src=`/images/postPhotos/${p.postPhoto[0]}` alt='')
+          h3=`Sender name${p.from.name}`
+          h3=p.to.email
+          h3=`Reciver Name${p.to.name}`
+          a.btn1(href=`/reviewAppointment/${p._id}/${p.to._id}/${p.from._id}`) REVIEW
+        
+// footer section starts
+include footer
+script(src='/js/script.js')

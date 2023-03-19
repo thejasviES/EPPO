@@ -1,0 +1,39 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title EPPO
+  // font awesome cdn link
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css')
+  // bootstrap cdn link
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css')
+  // custom css file link
+  link(rel='stylesheet' href='/css/style.css')
+// header section starts
+
+include navbar
+// header section ends
+section#review.review
+  .container
+    h1.heading(style='margin-top: 7rem;') review
+    .row.align-items-center
+      .col-md-6.image
+        img.w-100.mb-5.mb-md-0(src='/images/application/err9.jpg' alt='' style='border-radius: 10rem;')
+      .givereview
+        form(action='post' method='post' class="form--review")
+          span Post ID :
+          input.box(type='text' name='name' id="post" value=`${parm}` readonly)
+          span From ID :
+          input.box(type='text' name='name' id="fromId" value=`${fromId}` readonly)
+          span To ID :
+          input.box(type='text' name='name' id="toId" value=`${toId}` readonly)
+          span Review :
+          input.box(type='text' name='review' placeholder='write your review' id="rev")
+          span Rating :
+          input(type='number' name='rating' placeholder='Give Rating out of five' min='1' max='5' required='' style='font-size: 1.6rem; width: 15rem;' id="rating")
+          input.btn(type='submit' value='Review' name='submit')
+// footer section starts
+include footer
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+script(src="/js/giveReview.js")

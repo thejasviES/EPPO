@@ -1,0 +1,55 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title EPPO
+  // font awesome cdn link
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css')
+  // bootstrap cdn link
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css')
+  // custom css file link
+  link(rel='stylesheet' href='/css/style.css')
+// header section starts
+include navbar
+// header section ends
+// home section starts
+section#home.home
+  .container
+    .row.min-vh-100.align-items-center
+      .content.text-center.text-md-left
+        h3 Events do not just happen, but arrive by appointment
+        p
+          | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium itaque, quasi aliquam alias tempora voluptatibus.
+        a.btn(href='#contact') make appointment
+// home section ends
+// Appointment section starts
+section.appoint
+  h1.heading Book your appointment
+  .box-container.container
+    .box
+      img(src='/images/application/err5.jpg' alt='')
+      h3 DOCTOR
+      a.btn1(href='/home/doctor') make appointment
+    .box
+      img(src='/images/application/err6.jpg' alt='')
+      h3 LAWYER
+      a.btn1(href='/home/lawyer') make appointment
+    .box
+      img(src='/images/application/err7.jpg' alt='')
+      h3 POLITICIAN
+      a.btn1(href='/home/politician') make appointment
+    .box
+      img(src='/images/application/err8.jpg' alt='')
+      h3 EDUCATIONAL CONSULTANT
+      a.btn1(href='/home/education') make appointment
+    .box
+      img(src='/images/application/err3.jpg' alt='')
+      h3 THERAPIST
+      a.btn1(href='/home/therapist') make appointment
+    .box
+      img(src='/images/application/err4.jpg' alt='')
+      h3 BARBER
+      a.btn1(href='/home/barber') make appointment
+include footer
+script(src='/js/script.js')

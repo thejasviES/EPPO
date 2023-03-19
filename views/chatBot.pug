@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel='stylesheet', href='/css/style2.css')
+    script(src='https://kit.fontawesome.com/3b5af9fed2.js', crossorigin='anonymous')
+  body
+    header Chat with robo
+    section.main
+      .user-area
+        img(src='https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/contact-icon.png')
+      .chatarea-main
+        .chatarea-outer
+          //
+            <div class="chatarea-inner user">Hello hi, how area you, i am good. What about you!</div>
+            <div class="chatarea-inner chatbot">Hello hi, how area you, i am good. What about you!</div>
+            <div class="chatarea-inner user">Hello hi, how area you, i am good. What about you!</div>
+      .chatbot-area
+        img(src='https://media.istockphoto.com/id/1359585151/photo/cute-blue-robot-giving-thumbs-up-3d.jpg?b=1&s=170667a&w=0&k=20&c=zHWqqnOwgEMK1BFmJSh5m9BWOLJGh85yztf7hOr-eeQ=')
+      button#mic
+        i.fa-duotone.fa-microphone
+    script(src='/js/chatbot.js')

@@ -1,0 +1,30 @@
+doctype html
+head
+  include head
+
+// header section starts
+link(rel='stylesheet' href='/css/style.css')
+include navbar
+section#request.request
+  h1.heading make appointment
+  form(action='post' method='post' class="create--form")
+    span To ID :
+    input.box(type='text' name='name' value=`${parm}` readonly id="to")
+    span appointment date :
+    input.box(type='datetime-local' name='date' required='' id="date")
+    label(for='slot' style='font-size: 1.7rem; color: rgb(12, 12, 12);') Date
+    label(for='appt' style='font-size: 1.8rem; color: black;') From time
+    input.box(type='time' name='appt' style='font-size: 1.8rem;' id="time")
+    label(for='appt' style='font-size: 1.8rem; color: black;') To time
+    input.box(type='time' name='appt' style='font-size: 1.8rem;' id="toTime")
+    input.box(type='file' name='date'  multiple="multiple" id="postPhoto")
+    label(for='slot' style='font-size: 1.7rem; color: rgb(12, 12, 12);') Upload document
+    input.box(type='text' name='date' id="postDescription" )
+    label(for='slot' style='font-size: 1.7rem; color: rgb(12, 12, 12);') Message
+    
+    input.btn(type='submit' value='make appointment' name='submit')
+// footer section starts
+include footer
+script(src='/js/script.js')
+script(src="/js/createPost.js")
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')

@@ -1,0 +1,42 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title EPPO
+  // font awesome cdn link
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css')
+  // bootstrap cdn link
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css')
+  // custom css file link
+  link(rel='stylesheet' href='/css/style.css')
+// header section starts
+include navbar
+// header section ends
+section.appointment
+  h1.heading Book your appointment
+  .box-container.container
+    each u in user 
+        if(u.roles==parm)
+            .box
+                .share
+                    a.fab.fa-facebook-f(href='#')
+                    a.fab.fa-twitter(href='#')
+                    a.fab.fa-instagram(href='#')
+                    a.fab.fa-video(href='http://vcappvc.netlify.app') 
+                .content
+                    img(src=`/images/userPhotos/${u.photo}` alt='')
+                    h3=u.name
+                    h4=u.email 
+                    h4=`Location:${u.location}`
+                    h4
+                    i.fas.fa-phone
+                    a(href=`tel:${u.phone}` style='color: rgb(26, 26, 25);') Phone Number
+                    a.btn2(href=`/viewReview/${u._id}` style="display:block; width:50%; margin:auto;") view reviews
+                    br
+                    a.btn2(href=`/viewBlocked/${u._id}` style="display:block; width:50%; margin:auto;") view availability
+                    a.btn2(href=`/createPost/${u._id}` style="display:block;width:50%; margin:auto;") request appointment
+            
+// footer section starts
+include footer
+script(src='./script.js')

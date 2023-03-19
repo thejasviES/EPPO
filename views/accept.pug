@@ -1,0 +1,27 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title EPPO
+  // font awesome cdn link
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css')
+  // bootstrap cdn link
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css')
+  // custom css file link
+  link(rel='stylesheet' href='/css/style.css')
+// header section starts
+include navbar
+// header section ends
+section#request.request
+  h1.heading
+    | accept
+    span(style='color: skyblue; margin-top: 5rem;')  APPOINTMENT
+  form(action='post' method='post' class="acceptPost--form" )
+    span Post ID :
+    input.box(type='text' name='name' value =`${parm}` id="pId")
+    input.btn(type='submit' value='accept' name='submit')
+// footer section starts
+include footer
+script(src='/js/acceptPost.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
