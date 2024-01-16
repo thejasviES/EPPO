@@ -38,11 +38,12 @@ exports.creatPost = async (req, res, next) => {
 }
 exports.viewAppointments = async (req, res, next) => {
     const posts = await Post.find();
-    try { const idUser = jwt.verify(req.cookies.jwt, process.env.JWT_SECRET, (err, decoded) => { return decoded.id }); } catch (err) {
-        console.log(err);
-    }
-    const user = await User.findById(idUser);
-    res.status(200).render('viewAppointment', { posts, idUser })
+    console.log(req.body)
+    const idUser = await jwt.verify(req.cookies.jwt, process.env.JWT_SECRET);
+    console.log(idUser)
+    const user = await User.findById(idUser.id);
+    
+    res.status(200).render('viewAppointment', { posts, user })
 }
 exports.updateAppointments = async (req, res, next) => {
     const pid = req.params.pId;

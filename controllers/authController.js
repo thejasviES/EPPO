@@ -83,8 +83,8 @@ module.exports.login = async (req, res, next) => {
     } catch (err) { console.log("error while sending email") }
     if (user) {
       createSendToken(user, res);
-      const token = signToken(user._id);
-      res.status(200).json({ status: "success", token });
+      // const token = signToken(user._id);
+      // res.status(200).json({ status: "success", token });
     }
   } catch (err) {
     console.log(err);
